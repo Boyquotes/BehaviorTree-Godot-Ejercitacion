@@ -15,7 +15,7 @@ onready var tick := Tick.new()
 #### Metodos
 func _ready() -> void:
 	if get_child_count() != 1:
-		push_error(str("BehaviorTree \"", name, "\" puede tener solo un hijo."))
+		push_error(str("BehaviorTree \"", name, "\" debe tener un (solo) hijo."))
 
 
 func run(actor, blackboard, debug = false) -> int:
