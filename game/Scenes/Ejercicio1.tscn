@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://game/BT/Sequence.gd" type="Script" id=1]
+[ext_resource path="res://game/BT/ConditionTask.gd" type="Script" id=2]
+[ext_resource path="res://game/NPCs/NPC.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Sprites/ClassDiagram.png" type="Texture" id=4]
+
+[node name="Ejercicio1" type="Node2D"]
+
+[node name="NPC" parent="." instance=ExtResource( 3 )]
+
+[node name="Sequence" type="Node" parent="NPC/BehaviorTree" index="0"]
+script = ExtResource( 1 )
+
+[node name="ConditionTask" type="Node" parent="NPC/BehaviorTree/Sequence"]
+script = ExtResource( 2 )
+
+[node name="ConditionTask" type="Node" parent="NPC/BehaviorTree" index="1"]
+script = ExtResource( 2 )
+
+[node name="ClassDiagram" type="Sprite" parent="."]
+position = Vector2( 676.328, 339.106 )
+texture = ExtResource( 4 )
+
+[editable path="NPC"]

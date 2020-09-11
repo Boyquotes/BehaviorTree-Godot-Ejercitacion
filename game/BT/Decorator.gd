@@ -19,7 +19,7 @@ func _notification(notification: int) -> void:
 		update_configuration_warning()
 
 
-func _get_configuration_warning() -> String:	 
+func _get_configuration_warning() -> String: 
 	if not get_child_count() == 1:
 		return "Decoradores deben tener exactamente un hijo"
 	return ""
